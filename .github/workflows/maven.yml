@@ -5,7 +5,7 @@ on:
     branches: [ "patch" ]
   pull_request:
     branches: [ "patch" ]
-
+  workflow_dispatch:  
 jobs:
   build:
 
