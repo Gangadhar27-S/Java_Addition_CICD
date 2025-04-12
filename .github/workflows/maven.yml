@@ -1,10 +1,7 @@
 name: Java CI with Maven
 
 on:
- 
-  pull_request:
-    branches: [ "patch" ]
-  workflow_dispatch:  
+   workflow_dispatch:  
 jobs:
   build:
 
