@@ -25,7 +25,7 @@ jobs:
     - name: Archive the Jar
       uses: actions/upload-artifact@v4
       with:
-        name: java-app
+        name: Java_Addition_CICD
         path: target/*.jar
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
