@@ -32,3 +32,22 @@ jobs:
       with:
         name: Java_Addition_CICD
         path: target/*.jar
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Download Build Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: Java_Addition_CICD
+
+    - name: Deploy Artifacts
+      run: |
+        echo "Deploying artifacts..."
+        # Add your deployment commands, e.g., uploading to a server or cloud
+        # Example: scp target/*.jar user@server:/path/to/deploy
