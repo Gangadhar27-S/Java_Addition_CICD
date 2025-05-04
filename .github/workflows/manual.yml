@@ -5,7 +5,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout repository
@@ -27,12 +27,11 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Java_Addition_CICD
-        path: target/*.jar
+        path: ./
 
     - name: Download the artifact
       uses: actions/download-artifact@v4
       with:
           name: Java_Addition_CICD
-          path: |
-            ./path/to/save/artifacts
-            ./source/repos/java addition
+          path: ./
+            
